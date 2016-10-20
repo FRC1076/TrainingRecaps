@@ -1,7 +1,15 @@
 
 public class Week3 {
     public static void main(String[] args) {
-        System.out.println(sum(100));
+        String[] names = {"aaron", "caleb", "luke", "gaya", "sulaymon"};
+
+        System.out.println(names[0]); // "aaron"
+        System.out.println(names[4]); // "sulaymon"
+        System.out.println(names.length); // 5
+        // Print out all of the names in the list.
+        for (int i = 0; i < names.length; i = i + 1) {
+            System.out.println(names[i]);
+        }
     }
     
     public static int factorial(int x) {
