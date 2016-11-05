@@ -13,7 +13,7 @@ public class Robot {
         this.xPosition = xPosition;
         this.yPosition = yPosition;
         this.xVelocity = xVelocity;
-        this.yPosition = yVelocity; // This used to be this.yPosition = yVelocity, which was caught in our tests!
+        this.yVelocity = yVelocity; // This used to be this.yPosition = yVelocity, which was caught in our tests!
     }
     
     public String toString() {
@@ -24,5 +24,10 @@ public class Robot {
     public void update() {
         this.xPosition += this.xVelocity;
         this.yPosition += this.yVelocity;
+    }
+    
+    public void driveToPoint(double x, double y) {
+        xVelocity = x - xPosition;
+        yVelocity = y - yPosition;
     }
 }
